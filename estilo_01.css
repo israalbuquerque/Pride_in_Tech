@@ -1,0 +1,183 @@
+*{
+
+    margin: 1px;
+    padding: 1px;
+    
+   
+    
+}
+
+.container{
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.2fr 0.7fr 0.7fr 0.7fr 0.7fr  ;
+    grid-template-rows: 0.3fr 1.0fr 0.2fr 2.0fr  ;
+    grid-template-areas: "sidebar nav nav1 nav2 nav3 "
+                         "sidebar  main main main1 main1 "  
+                         "sidebar  conteudoTexto conteudoTexto conteudoTexto conteudoTexto"
+                         "sidebar conteudo1 conteudo2 conteudo3 conteudo4 " 
+                          ;
+    grid-gap: 0.5em;
+    background-color: lightgray;
+    color: rgb(74, 27, 117);
+ 
+}
+
+#nav{
+
+    
+    background-color: lightblue;
+    grid-area: nav;
+    left: 100%;
+    margin: 5px;
+    background: rgb(74, 27, 117);
+    height: 20px;
+   padding: 18px;
+   border-radius: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+
+
+
+
+}
+
+.search-btn{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(74, 27, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.search-box{
+
+   position: absolute; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background:  rgb(74, 25, 121);
+   height: 40px;
+   padding: 18px;
+   border-radius: 40px;
+}
+
+#nav1{
+
+   /*background-color: lightblue;*/
+    grid-area: nav1;
+
+}
+
+#nav2{
+
+   /* background-color: lightblue;*/
+    grid-area: nav2;
+
+}
+
+#nav3{
+
+   /* background-color: lightblue; */
+    grid-area: nav3;
+
+}
+
+
+
+
+
+#main{
+
+   /* background-color: lightsalmon;*/
+    grid-area: main;
+    
+}
+
+
+
+#main1{
+
+    /*background-color: lightsalmon;*/
+    grid-area: main1;
+    margin-top: 65px;
+    color: rgb(74, 25, 121);
+    
+}
+
+
+#sidebar{
+
+   background-color:rgb(74, 27, 117);
+    grid-area: sidebar;
+   /* width: 150px;*/
+    /*margin-left: auto;*/
+
+}
+
+#conteudoTexto{
+
+    background-color: white;
+    grid-area: conteudoTexto;
+    width: 100%;
+    margin-left: 150%;
+    height: 100%;
+    
+
+
+}
+
+#conteudo1{
+
+   /* background-color: lightpink;*/
+    grid-area: conteudo1;
+
+}
+
+#conteudo2{
+
+    /*background-color: lightslategray;*/
+    grid-area: conteudo2;
+
+}
+
+#conteudo3{
+
+   /* background-color: lightskyblue;*/
+    grid-area: conteudo3;
+
+}
+
+#conteudo4{
+
+   /* background-color: lightskyblue;*/
+    grid-area: conteudo4;
+
+}
+
+
+@media screen and (max-width :1020px) {
+    
+    .container{
+    flex-direction: column-reverse;
+    }
+}
